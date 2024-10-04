@@ -26,6 +26,7 @@
                 // Check if user is logged in
                 if (!isLoggedIn)
                 {
+                    // Main menu
                     mainMenu.Show();
                     string choice = Console.ReadLine();
 
@@ -66,6 +67,7 @@
                     continue;
                 }
 
+                // Logged in menu
                 Menu loggedInMenu = new Menu($"Velkommen {checkInRecord.GetUserName()}!");
 
                 loggedInMenu.AddMenuItem("Check Ind");
@@ -82,17 +84,22 @@
 
                     string menuChoice = Console.ReadLine();
 
+
+                    // Check if current user is employee
                     switch (checkInRecord.IsEmployee())
                     {
+
+                        // Employee menu
                         case true:
 
                             switch (menuChoice)
                             {
-
+                                // Check current user in
                                 case "1":
                                     loggedInMenu.MenuTitle = checkInRecord.CheckInCurrentUser();
                                     break;
 
+                                // Check current user out
                                 case "2":
                                     loggedInMenu.MenuTitle = checkInRecord.CheckOutCurrentUser();
                                     break;
@@ -100,42 +107,40 @@
                                 case "3":
                                     while (active)
                                     {
-                                        if (checkInRecord.IsEmployee())
+                                        employeeMenu.Show();
+
+                                        string employeeMenuChoice = Console.ReadLine();
+
+                                        switch (employeeMenuChoice)
                                         {
-                                            employeeMenu.Show();
+                                            case "1":
+                                                Console.Clear();
+                                                checkInRecord.ListCheckedInPeople();
+                                                Console.ReadKey();
+                                                break;
 
-                                            string employeeMenuChoice = Console.ReadLine();
+                                            case "2":
+                                                Console.Clear();
+                                                checkInRecord.ListRecentCheckouts();
+                                                Console.ReadKey();
+                                                break;
 
-                                            switch (employeeMenuChoice)
-                                            {
-                                                case "1":
-                                                    Console.Clear();
-                                                    checkInRecord.ListCheckedInPeople();
-                                                    Console.ReadKey();
-                                                    break;
+                                            case "3":
+                                                Console.Clear();
+                                                active = false;
+                                                break;
 
-                                                case "2":
-                                                    Console.Clear();
-                                                    checkInRecord.ListRecentCheckouts();
-                                                    Console.ReadKey();
-                                                    break;
-
-                                                case "3":
-                                                    Console.Clear();
-                                                    active = false;
-                                                    break;
-
-                                                default:
-                                                    Console.Clear();
-                                                    Console.WriteLine("Forkert input. Prøv venligst igen");
-                                                    Console.ReadKey();
-                                                    break;
-                                            }
+                                            default:
+                                                Console.Clear();
+                                                Console.WriteLine("Forkert input. Prøv venligst igen");
+                                                Console.ReadKey();
+                                                break;
                                         }
                                     }
                                     active = true;
                                     break;
 
+                                // Log out
                                 case "4":
                                     checkInRecord.LogOut();
                                     isLoggedIn = false;
@@ -149,18 +154,23 @@
                             }
                             break;
 
+
+                        // Guest menu
                         case false:
                             switch (menuChoice)
                             {
 
+                                // Check current user in
                                 case "1":
                                     loggedInMenu.MenuTitle = checkInRecord.CheckInCurrentUser();
                                     break;
 
+                                // Check current user out
                                 case "2":
                                     loggedInMenu.MenuTitle = checkInRecord.CheckOutCurrentUser();
                                     break;
 
+                                // Log out
                                 case "3":
                                     checkInRecord.LogOut();
                                     isLoggedIn = false;

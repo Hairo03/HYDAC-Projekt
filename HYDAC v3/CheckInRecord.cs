@@ -10,11 +10,15 @@ namespace HYDAC_v3
     {
         private List<Person> people = new List<Person>();
         private Queue<Person> recentCheckouts = new Queue<Person>();
+        
+        // The amount of recent checkouts shown in the checkout history
         private const int MAX_RECENT_CHECKOUTS = 10;
+        
         private Person currentUser = null;
 
         private List<Guest> guests = new List<Guest>();
 
+        // List of employees needs to be changed manually to add new employees
         private List<Employee> employees = new List<Employee>
         {
             new Employee ("Jonathan", "23656298"),
@@ -33,7 +37,6 @@ namespace HYDAC_v3
             if (user != null)
             {
                 currentUser = user;
-                //Console.WriteLine($"Velkommen {user.Name}!");
                 return true;
             }
 
@@ -41,7 +44,6 @@ namespace HYDAC_v3
             if (guest != null)
             {
                 currentUser = guest;
-                //Console.WriteLine($"Velkommen {guest.Name}!");
                 return true;
             }
             Console.WriteLine("Forkert indtastning eller gæsten blev ikke fundet i systemet. Prøv venligst igen");
