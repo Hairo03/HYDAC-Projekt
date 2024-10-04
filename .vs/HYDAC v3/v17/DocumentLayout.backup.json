@@ -1,0 +1,164 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|c:\\users\\theha\\source\\repos\\hydac v3\\hydac v3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|solutionrelative:hydac v3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|c:\\users\\theha\\source\\repos\\hydac v3\\hydac v3\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|solutionrelative:hydac v3\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|c:\\users\\theha\\source\\repos\\hydac v3\\hydac v3\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|solutionrelative:hydac v3\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|c:\\users\\theha\\source\\repos\\hydac v3\\hydac v3\\checkinrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|solutionrelative:hydac v3\\checkinrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|c:\\users\\theha\\source\\repos\\hydac v3\\hydac v3\\securitypersonnel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|solutionrelative:hydac v3\\securitypersonnel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|c:\\users\\theha\\source\\repos\\hydac v3\\hydac v3\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|solutionrelative:hydac v3\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|c:\\users\\theha\\source\\repos\\hydac v3\\hydac v3\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|solutionrelative:hydac v3\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|c:\\users\\theha\\source\\repos\\hydac v3\\hydac v3\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8576E6F0-4315-43CE-9A44-1FD96D201103}|HYDAC v3\\HYDAC v3.csproj|solutionrelative:hydac v3\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MenuItem.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\MenuItem.cs",
+              "RelativeDocumentMoniker": "HYDAC v3\\MenuItem.cs",
+              "ToolTip": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\MenuItem.cs",
+              "RelativeToolTip": "HYDAC v3\\MenuItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T09:14:10.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\Menu.cs",
+              "RelativeDocumentMoniker": "HYDAC v3\\Menu.cs",
+              "ToolTip": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\Menu.cs",
+              "RelativeToolTip": "HYDAC v3\\Menu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T09:14:00.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SecurityPersonnel.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\SecurityPersonnel.cs",
+              "RelativeDocumentMoniker": "HYDAC v3\\SecurityPersonnel.cs",
+              "ToolTip": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\SecurityPersonnel.cs",
+              "RelativeToolTip": "HYDAC v3\\SecurityPersonnel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:28:16.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\Employee.cs",
+              "RelativeDocumentMoniker": "HYDAC v3\\Employee.cs",
+              "ToolTip": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\Employee.cs",
+              "RelativeToolTip": "HYDAC v3\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:28:07.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\Person.cs",
+              "RelativeDocumentMoniker": "HYDAC v3\\Person.cs",
+              "ToolTip": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\Person.cs",
+              "RelativeToolTip": "HYDAC v3\\Person.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAUwCYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:28:00.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Guest.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\Guest.cs",
+              "RelativeDocumentMoniker": "HYDAC v3\\Guest.cs",
+              "ToolTip": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\Guest.cs",
+              "RelativeToolTip": "HYDAC v3\\Guest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:27:54.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CheckInRecord.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\CheckInRecord.cs",
+              "RelativeDocumentMoniker": "HYDAC v3\\CheckInRecord.cs",
+              "ToolTip": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\CheckInRecord.cs",
+              "RelativeToolTip": "HYDAC v3\\CheckInRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:27:48.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\Program.cs",
+              "RelativeDocumentMoniker": "HYDAC v3\\Program.cs",
+              "ToolTip": "C:\\Users\\theha\\source\\repos\\HYDAC v3\\HYDAC v3\\Program.cs",
+              "RelativeToolTip": "HYDAC v3\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T09:23:25.074Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
