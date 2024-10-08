@@ -9,14 +9,17 @@ namespace HYDAC_v3
 {
     internal class Employee : Person
     {
+        
 
         public Employee(string name, string phoneNumber) : base(name, phoneNumber)
         {
         }
         
 
-        //TODO: Add room class
-        //public void AssignMeetingRoom(Guest guest, Room room);
+        public void AssignMeetingRoom(Guest guest, string room)
+        {
+            guest.AssignedRoom = room;
+        }
 
     }
 }

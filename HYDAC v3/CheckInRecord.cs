@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,9 @@ namespace HYDAC_v3
 {
     internal class CheckInRecord
     {
-        private List<Person> people = new List<Person>();
+        private string filepath = "guestlogins.txt";
+
+        private List<Person> checkedInPeople = new List<Person>();
         private Queue<Person> recentCheckouts = new Queue<Person>();
         
         // The amount of recent checkouts shown in the checkout history
@@ -28,19 +31,19 @@ namespace HYDAC_v3
 
         public CheckInRecord ()
         {
-            
+            guests = LoadGuestList();
         }
 
         public bool LogIn(string phoneNumber)
         {
-            var user = employees.Find(e => e.PhoneNumber.Equals(phoneNumber, StringComparison.OrdinalIgnoreCase));
-            if (user != null)
+            var employee = employees.Find(e => e.PhoneNumber.Equals(phoneNumber, StringComparison.OrdinalIgnoreCase));
+            if (employee != null)
             {
-                currentUser = user;
+                currentUser = employee;
                 return true;
             }
 
-            var guest = people.Find(g => g is Guest && g.PhoneNumber.Equals(phoneNumber, StringComparison.OrdinalIgnoreCase));
+            var guest = guests.Find(g => g is Guest && g.PhoneNumber.Equals(phoneNumber, StringComparison.OrdinalIgnoreCase));
             if (guest != null)
             {
                 currentUser = guest;
@@ -58,17 +61,18 @@ namespace HYDAC_v3
             }
         }
 
-        public bool RegisterGuest(string name, string company, string phoneNumber)
+        public bool RegisterGuest(string name, string company, string phoneNumber, bool safetyFolderReceived)
         {
-            if (people.Any(p => p.PhoneNumber.Equals(phoneNumber, StringComparison.OrdinalIgnoreCase)))
+            if (guests.Any(p => p.PhoneNumber.Equals(phoneNumber, StringComparison.OrdinalIgnoreCase)))
             {
                 Console.WriteLine("Dette telefonnummer eksisterer allerede i systemet. Prøv at logge ind.");
                 Console.ReadKey();
                 return false;
             }
 
-            var guest = new Guest(name, phoneNumber, company);
-            people.Add(guest);
+            var guest = new Guest(name, phoneNumber, company, safetyFolderReceived);
+            guests.Add(guest);
+            SaveToList(guest);
             Console.Clear();
             Console.WriteLine($"Gæst registrering fuldført: {name}, {company}");
             Thread.Sleep(2000);
@@ -80,9 +84,9 @@ namespace HYDAC_v3
         {
             if (currentUser != null)
             {
-                if (currentUser is Employee)
+                if (currentUser is Person)
                 {
-                    people.Add(currentUser);
+                    checkedInPeople.Add(currentUser);
                 }
                 return currentUser.CheckIn();
             }
@@ -98,9 +102,10 @@ namespace HYDAC_v3
 
             if (currentUser != null)
             {
-                if (currentUser is Employee)
+                if (currentUser is Guest)
                 {
-                    people.Remove(currentUser);
+                    checkedInPeople.Remove(currentUser);
+                    currentUser.AssignedRoom = null;
                 }
                 result = currentUser.CheckOut();
                 if (!currentUser.IsCheckedIn)
@@ -125,7 +130,7 @@ namespace HYDAC_v3
             }
 
             Console.WriteLine("Indcheckede personer på nuværende tidspunkt:\n");
-            foreach (var person in people)
+            foreach (var person in checkedInPeople)
             {
                 string role;
 
@@ -189,6 +194,46 @@ namespace HYDAC_v3
         public string GetUserName()
         {
             return currentUser.Name;
+        }
+
+        public List<Guest> LoadGuestList()
+        {
+            StreamReader reader = new StreamReader(filepath);
+
+            int i = 0;
+
+            List<Guest> persons = [];
+            string[] array = reader.ReadToEnd().Split("\r\n");
+
+            foreach (var item in array)
+            {
+                if (item.Length == 0)
+                {
+                    break;
+                }
+                string[] line = item.Split(':');
+
+                Console.WriteLine(item);
+
+                string name = line[0];
+                string phoneNumber = line[1];
+                string company = line[2];
+                bool safetyFolder = bool.Parse(line[3]);
+
+                Guest person = new Guest(name, phoneNumber, company, safetyFolder);
+                persons.Add(person);
+                
+                i++;
+            }
+            reader.Close();
+            return persons;
+        }
+
+        public void SaveToList(Person person)
+        {
+            StreamWriter writer = new StreamWriter(filepath);
+            writer.WriteLine(person.ToString());
+            writer.Close();
         }
     }
 }

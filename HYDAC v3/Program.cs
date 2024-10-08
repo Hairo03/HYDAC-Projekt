@@ -50,7 +50,30 @@
                             string guestPhoneNumber = Console.ReadLine();
                             Console.Write("Indtast firmanavn: ");
                             string guestCompany = Console.ReadLine();
-                            if (checkInRecord.RegisterGuest(guestName, guestCompany, guestPhoneNumber))
+                            Console.Write("Har du modtaget en sikkerheds mappe? (Y/N)");
+                            bool safetyFolderReceived;
+                            
+
+                            while (true)
+                            {
+                                string input = Console.ReadLine();
+                                if (input.ToLower() == "y")
+                                {
+                                    safetyFolderReceived = true;
+                                    break;
+                                }
+                                else if (input.ToLower() == "n")
+                                {
+                                    safetyFolderReceived = false;
+                                    break;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Forkert input, prøv igen");
+                                    continue;
+                                }
+                            }
+                            if (checkInRecord.RegisterGuest(guestName, guestCompany, guestPhoneNumber, safetyFolderReceived))
                             {
                                 isLoggedIn = checkInRecord.LogIn(guestPhoneNumber);
                             }
