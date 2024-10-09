@@ -102,10 +102,10 @@ namespace HYDAC_v3
 
             if (currentUser != null)
             {
-                if (currentUser is Guest)
+                if (currentUser is Person)
                 {
                     checkedInPeople.Remove(currentUser);
-                    currentUser.AssignedRoom = null;
+                    //currentUser.AssignedRoom = null;
                 }
                 result = currentUser.CheckOut();
                 if (!currentUser.IsCheckedIn)
